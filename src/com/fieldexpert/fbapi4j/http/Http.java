@@ -12,22 +12,22 @@ public class Http {
 	public static final String POST = "POST";
 
 	public static InputStream get(URL url, Map<String, String> parameters) {
-		return req(GET, url, parameters);
+		return req(GET, url, parameters, null, null);
 	}
 
 	public static InputStream post(URL url, Map<String, String> parameters) {
-		return req(POST, url, parameters);
+		return req(POST, url, parameters, null, null);
 	}
 
 	public static InputStream post(URL url, Map<String, String> parameters, List<Attachment> attachments) {
-		return req(POST, url, parameters, attachments);
+		return req(POST, url, parameters, null, null, attachments);
 	}
 
-	public static InputStream req(String method, URL url, Map<String, String> parameters) {
-		return req(method, url, parameters, null);
+	public static InputStream req(String method, URL url, Map<String, String> parameters, Integer connectTimeOut, Integer readTimeOut) {
+		return req(method, url, parameters, connectTimeOut, readTimeOut, null);
 	}
 
-	public static InputStream req(String method, URL url, Map<String, String> parameters, List<Attachment> attachments) {
+	public static InputStream req(String method, URL url, Map<String, String> parameters, Integer connectTimeOut, Integer readTimeOut, List<Attachment> attachments) {
 		boolean hasAttachments = attachments != null && !attachments.isEmpty();
 
 		if (hasAttachments && !method.equals(POST)) {
@@ -39,11 +39,11 @@ public class Http {
 		try {
 			HttpRequest request = null;
 			if (GET.equals(method)) {
-				request = new GetRequest(url, parameters);
+				request = new GetRequest(url, parameters, connectTimeOut, readTimeOut);
 			} else if (POST.equals(method) && !hasAttachments) {
-				request = new PostRequest(url, parameters);
+				request = new PostRequest(url, parameters, connectTimeOut, readTimeOut);
 			} else if (POST.equals(method) && hasAttachments) {
-				request = new MultiPartPostRequest(url, parameters, attachments);
+				request = new MultiPartPostRequest(url, parameters, connectTimeOut, readTimeOut, attachments);
 			} else {
 				throw new IllegalStateException("Couldn't resolve HTTP method.");
 			}

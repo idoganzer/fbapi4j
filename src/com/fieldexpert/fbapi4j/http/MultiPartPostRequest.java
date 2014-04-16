@@ -24,8 +24,8 @@ class MultiPartPostRequest extends HttpRequest {
 	private String boundary;
 	private List<Attachment> attachments;
 
-	public MultiPartPostRequest(URL url, Map<String, String> parameters, List<Attachment> attachments) {
-		super(Http.POST, url, parameters);
+	public MultiPartPostRequest(URL url, Map<String, String> parameters, Integer connectTimeOut, Integer readTimeOut, List<Attachment> attachments) {
+		super(Http.POST, url, parameters, connectTimeOut, readTimeOut);
 		this.attachments = attachments;
 		this.boundary = createBoundary();
 	}

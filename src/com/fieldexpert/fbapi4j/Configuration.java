@@ -16,6 +16,10 @@ public final class Configuration {
 	private static final String EMAIL = "email";
 	private static final String PASSWORD = "password";
 	private static final String PATH = "path";
+	private static final String CONNECT_TIMEOUT = "connectTimeout";
+	private static final String READ_TIMEOUT = "readTimeout";
+	private static final String CONNECT_TIMEOUT_TIME = "10000";
+	private static final String READ_TIMEOUT_TIME = "10000";
 
 	private Properties properties;
 
@@ -117,6 +121,16 @@ public final class Configuration {
 	public String getPassword() {
 		verify(PASSWORD);
 		return getProperty(PASSWORD);
+	}
+	
+	public String getConnectTimeout() {
+		String connTimeout = getProperty(CONNECT_TIMEOUT);
+		return connTimeout != null ? connTimeout : CONNECT_TIMEOUT_TIME;
+	}
+	
+	public String getReadTimeout() {
+		String readTimeout = getProperty(READ_TIMEOUT);
+		return readTimeout != null ? readTimeout : READ_TIMEOUT_TIME;
 	}
 
 	public Properties getProperties() {

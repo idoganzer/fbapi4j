@@ -10,8 +10,8 @@ class PostRequest extends HttpRequest {
 
 	private static final String FORM_URLENCODED = "application/x-www-form-urlencoded;charset=UTF-8";
 
-	public PostRequest(URL url, Map<String, String> parameters) {
-		super(Http.POST, url, parameters);
+	public PostRequest(URL url, Map<String, String> parameters, Integer connectTimeOut, Integer readTimeOut) {
+		super(Http.POST, url, parameters, connectTimeOut, readTimeOut);
 	}
 
 	@Override

@@ -40,11 +40,15 @@ abstract class HttpRequest {
 	protected String method;
 	protected URL url;
 	protected Map<String, String> parameters;
+	protected Integer connectTimeOut;
+	protected Integer readTimeOut;
 
-	public HttpRequest(String method, URL url, Map<String, String> parameters) {
+	public HttpRequest(String method, URL url, Map<String, String> parameters, Integer connectTimeOut, Integer readTimeOut) {
 		this.method = method;
 		this.url = url;
 		this.parameters = parameters;
+		this.connectTimeOut = connectTimeOut;
+		this.readTimeOut = readTimeOut;
 	}
 
 	protected HttpURLConnection conn(URL url) throws IOException {
@@ -69,7 +73,13 @@ abstract class HttpRequest {
 
 	final InputStream execute() throws IOException {
 		HttpURLConnection conn = conn(url);
-
+		
+		if(this.connectTimeOut != null)
+			conn.setConnectTimeout(this.connectTimeOut.intValue());
+		
+		if(this.readTimeOut != null)
+			conn.setReadTimeout(this.readTimeOut.intValue());
+		
 		String type = getContentType();
 		if (type != null) {
 			conn.setRequestProperty(CONTENT_TYPE, type);

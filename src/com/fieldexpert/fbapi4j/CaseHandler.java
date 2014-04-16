@@ -1,8 +1,5 @@
 package com.fieldexpert.fbapi4j;
 
-import static com.fieldexpert.fbapi4j.common.StringUtil.collectionToCommaDelimitedString;
-import static java.util.Arrays.asList;
-
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -10,6 +7,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import static java.util.Arrays.asList;
+import static com.fieldexpert.fbapi4j.common.StringUtil.collectionToCommaDelimitedString;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -26,7 +25,7 @@ import com.fieldexpert.fbapi4j.dispatch.Response;
 
 class CaseHandler extends AbstractHandler<Case> {
 
-	private static final String cols = collectionToCommaDelimitedString(asList(Fbapi4j.S_PROJECT, Fbapi4j.S_AREA, Fbapi4j.S_SCOUT_DESCRIPTION, Fbapi4j.S_TITLE, Fbapi4j.S_EVENT, Fbapi4j.EVENTS));
+	private static final String cols = collectionToCommaDelimitedString(asList(Fbapi4j.CUSTOM_FIELDS, Fbapi4j.S_PROJECT, Fbapi4j.S_AREA, Fbapi4j.S_SCOUT_MESSAGE, Fbapi4j.S_TITLE, Fbapi4j.S_EVENT, Fbapi4j.EVENTS));
 
 	CaseHandler(Dispatch dispatch, Util util, String token) {
 		super(dispatch, util, token);
@@ -41,9 +40,15 @@ class CaseHandler extends AbstractHandler<Case> {
 	@Override
 	Case build(Map<String, String> data, Document doc) {
 		Case c = new Case(Integer.parseInt(data.get(Fbapi4j.IX_BUG)), data.get(Fbapi4j.S_PROJECT), data.get(Fbapi4j.S_AREA), //
-				data.get(Fbapi4j.S_TITLE), data.get(Fbapi4j.S_SCOUT_DESCRIPTION));
+				data.get(Fbapi4j.S_TITLE), data.get(Fbapi4j.S_SCOUT_MESSAGE));
 		List<Event> events = events(doc, c);
 		c.addEvents(events);
+		
+		for(String key : data.keySet())
+		{
+			c.setField(key, data.get(key));
+		}
+		
 		update(c, data);
 		return c;
 	}
@@ -128,7 +133,7 @@ class CaseHandler extends AbstractHandler<Case> {
 	}
 
 	void scout(Case bug) {
-		sendAndUpdate(Fbapi4j.NEW, bug, util.map(Fbapi4j.S_SCOUT_DESCRIPTION, bug.getTitle()));
+		sendAndUpdate(Fbapi4j.NEW, bug, new HashMap<String, Object>());
 	}
 
 	private Response send(String command, Map<String, Object> parameters, List<Attachment> attachments) {

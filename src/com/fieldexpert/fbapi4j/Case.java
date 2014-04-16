@@ -9,6 +9,7 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -82,6 +83,11 @@ public class Case extends Entity {
 	public Integer getId() {
 		return (Integer) fields.get(Fbapi4j.IX_BUG);
 	}
+	
+	public void setField(String field, Object value)
+	{
+		fields.put(field, value);
+	}
 
 	public String getProject() {
 		return (String) fields.get(Fbapi4j.S_PROJECT);
@@ -149,8 +155,16 @@ public class Case extends Entity {
 		fields.put(Fbapi4j.HRS_CURR_EST, hours);
 	}
 
-	Map<String, Object> getFields() {
-		return fields;
+	public Map<String, Object> getCustomFields() {
+		HashMap<String, Object> customFields = new HashMap<String, Object>();
+		
+		for(String field : fields.keySet())
+		{
+			if(field.startsWith("plugin_customfields_at_fogcreek_com_"))
+				customFields.put(field, fields.get(field));
+		}
+			
+		return customFields;
 	}
 
 	public void setTitle(String title) {

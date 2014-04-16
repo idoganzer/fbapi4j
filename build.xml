@@ -7,7 +7,8 @@
 	<property name="demo.src.dir" location="${basedir}/demo" />
 	<property name="lib.dir" location="${basedir}/lib" />
 	<property name="build.dir" location="${basedir}/bin" />
-	<property name="classes.dir" location="${build.dir}/classes" />
+	<!-- <property name="classes.dir" location="${build.dir}/classes" /> -->
+	<property name="classes.dir" location="C:\Dev\FogBugz\bin\classes" />
 	<property name="test.classes.dir" location="${build.dir}/test-classes" />
 	<property name="demo.classes.dir" location="${build.dir}/demo-classes" />
 	<property name="reports.dir" location="${build.dir}/reports" />
@@ -109,7 +110,7 @@
           target: compile-src
          - - - - - - - - - - - - - - - - - -->
 	<target name="compile-src" depends="init" description="Compile the java source">
-		<javac destdir="${classes.dir}" target="1.5" debug="true">
+		<javac destdir="${classes.dir}" target="1.6" debug="true">
 			<src path="${src.dir}" />
 			<classpath refid="classpath-compile" />
 		</javac>
@@ -119,7 +120,7 @@
           target: compile-test
          - - - - - - - - - - - - - - - - - -->
 	<target name="compile-test" depends="compile-src" description="Compile the test source">
-		<javac destdir="${test.classes.dir}" target="1.5" debug="true">
+		<javac destdir="${test.classes.dir}" target="1.6" debug="true">
 			<src path="${test.src.dir}" />
 			<classpath refid="classpath-test" />
 		</javac>
@@ -129,7 +130,7 @@
           target: compile-demo
          - - - - - - - - - - - - - - - - - -->
 	<target name="compile-demo" depends="compile-src" description="Compile the demo source">
-		<javac destdir="${demo.classes.dir}" target="1.5" debug="true">
+		<javac destdir="${demo.classes.dir}" target="1.6" debug="true">
 			<src path="${demo.src.dir}" />
 			<classpath refid="classpath-demo" />
 		</javac>

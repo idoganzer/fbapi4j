@@ -57,10 +57,12 @@ public final class HttpDispatch implements Dispatch {
 		}
 
 		InputStream resp = null;
+		Integer connTimeout = new Integer(configuration.getConnectTimeout());
+		Integer readTimeout = new Integer(configuration.getReadTimeout());
 		if (request != null && request.getAttachments().size() > 0) {
-			resp = Http.req(method, url, parameters, request.getAttachments());
+			resp = Http.req(method, url, parameters,connTimeout, readTimeout, request.getAttachments());
 		} else {
-			resp = Http.req(method, url, parameters);
+			resp = Http.req(method, url, parameters,connTimeout, readTimeout);
 		}
 
 		// for now, we only handle errors from the actual document,

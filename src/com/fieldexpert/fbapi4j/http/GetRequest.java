@@ -6,8 +6,8 @@ import java.util.Map;
 
 class GetRequest extends HttpRequest {
 
-	public GetRequest(URL url, Map<String, String> parameters) {
-		super(Http.GET, url(url, parameters), parameters);
+	public GetRequest(URL url, Map<String, String> parameters, Integer connectTimeOut, Integer readTimeOut) {
+		super(Http.GET, url(url, parameters), parameters, connectTimeOut, readTimeOut);
 	}
 
 	private static URL url(URL url, Map<String, String> parameters) {

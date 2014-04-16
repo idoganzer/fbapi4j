@@ -145,5 +145,7 @@ public final class Fbapi4j {
 	public static final String VIEW_PERSON = "viewPerson";
 
 	public static final String VIEW_PRIORITY = "viewPriority";
+	
+	public static final String CUSTOM_FIELDS = "plugin_customfields";
 
 }
