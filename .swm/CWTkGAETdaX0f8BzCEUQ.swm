@@ -1,0 +1,33 @@
+{
+    "id": "CWTkGAETdaX0f8BzCEUQ",
+    "name": "Hi",
+    "content": [
+        {
+            "type": "snippet",
+            "lines": [
+                " \t<property name=\"test.src.dir\" location=\"${basedir}/test\" />",
+                " \t<property name=\"demo.src.dir\" location=\"${basedir}/demo\" />",
+                " \t<property name=\"lib.dir\" location=\"${basedir}/lib\" />",
+                "*\t<property name=\"build.dir\" location=\"${basedir}/bin\" />",
+                "*\t<!-- <property name=\"classes.dir\" location=\"${build.dir}/classes\" /> -->",
+                "*\t<property name=\"classes.dir\" location=\"C:\\Dev\\FogBugz\\bin\\classes\" />",
+                " \t<property name=\"test.classes.dir\" location=\"${build.dir}/test-classes\" />",
+                " \t<property name=\"demo.classes.dir\" location=\"${build.dir}/demo-classes\" />",
+                " \t<property name=\"reports.dir\" location=\"${build.dir}/reports\" />"
+            ],
+            "firstLineNumber": 6,
+            "path": "build.xml",
+            "comments": [
+                "This is text"
+            ]
+        }
+    ],
+    "symbols": {},
+    "file_version": "2.0.1",
+    "meta": {
+        "app_version": "0.4.9-1",
+        "file_blobs": {
+            "build.xml": "7baf8c8bfeaa868e93d87afbddf913cbb2558a7c"
+        }
+    }
+}
