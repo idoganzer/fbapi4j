@@ -1,0 +1,28 @@
+{
+    "id": "PzKsaJ8cPgDF4275VuuJ",
+    "name": "Hello",
+    "content": [
+        {
+            "type": "snippet",
+            "lines": [
+                " package com.fieldexpert.fbapi4j;",
+                " ",
+                "*public enum AllowedOperation {",
+                "*\tEDIT, ASSIGN, RESOLVE, REACTIVATE, CLOSE, REOPEN, REPLY, FORWARD, EMAIL, MOVE, SPAM, REMIND;",
+                " }",
+                " "
+            ],
+            "firstLineNumber": 1,
+            "path": "src/com/fieldexpert/fbapi4j/AllowedOperation.java",
+            "comments": []
+        }
+    ],
+    "symbols": {},
+    "file_version": "2.0.1",
+    "meta": {
+        "app_version": "0.5.0-0",
+        "file_blobs": {
+            "src/com/fieldexpert/fbapi4j/AllowedOperation.java": "cc49c92410c5a1d91bfdffeae44e4c1ded93cc30"
+        }
+    }
+}
