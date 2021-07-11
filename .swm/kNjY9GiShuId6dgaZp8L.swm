@@ -22,6 +22,10 @@
             ]
         },
         {
+            "type": "text",
+            "text": "Text between vfevfe\n\nvfewvfrewv vfewvfe [[sym:./test/com/fieldexpert/fbapi4j/common/AssertTest.java(7ab7c410-0366-40b2-a833-576cceef27c0)]] hello [[sym-text:Project(1ea47700-a16f-4c68-b084-c8a27813adce)]] hi hi"
+        },
+        {
             "type": "snippet",
             "lines": [
                 " \t\tsetName(name);",
@@ -42,10 +46,6 @@
             ]
         },
         {
-            "type": "text",
-            "text": "ghjkghjkg ghjkghjkg ghjkghjk"
-        },
-        {
             "type": "snippet",
             "lines": [
                 " \t\t}",
@@ -62,9 +62,32 @@
             "comments": [
                 "morew commentds"
             ]
+        },
+        {
+            "type": "text",
+            "text": "ghjkghjkg ghjkghjkg ghjkghjk"
         }
     ],
-    "symbols": {},
+    "symbols": {
+        "7ab7c410-0366-40b2-a833-576cceef27c0": {
+            "type": "path",
+            "text": "test/com/fieldexpert/fbapi4j/common/AssertTest.java",
+            "path": "test/com/fieldexpert/fbapi4j/common/AssertTest.java"
+        },
+        "1ea47700-a16f-4c68-b084-c8a27813adce": {
+            "symbol": "1ea47700-a16f-4c68-b084-c8a27813adce",
+            "path": "src/com/fieldexpert/fbapi4j/Project.java",
+            "text": "Project",
+            "lineNumber": 13,
+            "lineData": "\tProject(Integer id, String name) {",
+            "wordIndex": {
+                "start": 1,
+                "end": 1
+            },
+            "fileBlob": "4ea78894f161afb9365dc1b3c0aae0f2f0a2ce64",
+            "type": "generic_text"
+        }
+    },
     "file_version": "2.0.2",
     "meta": {
         "app_version": "0.5.0-0",
