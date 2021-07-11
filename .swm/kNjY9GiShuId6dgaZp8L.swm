@@ -47,7 +47,7 @@
         },
         {
             "type": "text",
-            "text": "ghjkghjkg ghjkghjkg ghjkghjk.\n\n![](https://firebasestorage.googleapis.com/v0/b/swimm-dev-content/o/repositories%2FZ2l0aHViJTNBJTNBZmJhcGk0aiUzQSUzQWlkb2dhbnplcg%3D%3D%2F33c28484-ccc7-42b9-b11c-196f803c0982.png?alt=media&token=5300465b-97cc-43a1-a242-38d560124b35)\n\nthis is image [[sym-text:package(d01ac58a-ec39-41a6-87e9-15452c4e814c)]] [[sym:./src/com/fieldexpert/fbapi4j/Area.java(a5a057e2-11ef-4a3f-b0dd-c2d629c0c94e)]]"
+            "text": "ghjkghjkg ghjkghjkg ghjkghjk.\n\n![](https://firebasestorage.googleapis.com/v0/b/swimm-dev-content/o/repositories%2FZ2l0aHViJTNBJTNBZmJhcGk0aiUzQSUzQWlkb2dhbnplcg%3D%3D%2F33c28484-ccc7-42b9-b11c-196f803c0982.png?alt=media&token=5300465b-97cc-43a1-a242-38d560124b35)\n\nthis is image [[sym-text:package(d01ac58a-ec39-41a6-87e9-15452c4e814c)]] [[sym:./src/com/fieldexpert/fbapi4j/Area.java(a5a057e2-11ef-4a3f-b0dd-c2d629c0c94e)]] HTis is text"
         }
     ],
     "symbols": {
