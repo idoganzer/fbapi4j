@@ -9,7 +9,7 @@
         {
             "type": "snippet",
             "lines": [
-                "*package com.fieldexpert.fbapi4j.commonly;",
+                "*HI you!",
                 "*",
                 " public class Assert {",
                 " ",
@@ -47,7 +47,7 @@
         },
         {
             "type": "text",
-            "text": "ghjkghjkg ghjkghjkg ghjkghjk.\n\n![](https://firebasestorage.googleapis.com/v0/b/swimm-dev-content/o/repositories%2FZ2l0aHViJTNBJTNBZmJhcGk0aiUzQSUzQWlkb2dhbnplcg%3D%3D%2F33c28484-ccc7-42b9-b11c-196f803c0982.png?alt=media&token=5300465b-97cc-43a1-a242-38d560124b35)\n\nthis is image [[sym-text:package(d01ac58a-ec39-41a6-87e9-15452c4e814c)]] [[sym:./src/com/fieldexpert/fbapi4j/Area.java(a5a057e2-11ef-4a3f-b0dd-c2d629c0c94e)]] HTis is text"
+            "text": "ghjkghjkg ghjkghjkg ghjkghjk.\n\n![](https://firebasestorage.googleapis.com/v0/b/swimm-dev-content/o/repositories%2FZ2l0aHViJTNBJTNBZmJhcGk0aiUzQSUzQWlkb2dhbnplcg%3D%3D%2F33c28484-ccc7-42b9-b11c-196f803c0982.png?alt=media&token=5300465b-97cc-43a1-a242-38d560124b35)\n\nthis is image [[sym:./src/com/fieldexpert/fbapi4j/Area.java(a5a057e2-11ef-4a3f-b0dd-c2d629c0c94e)]] HTis is text"
         }
     ],
     "symbols": {
@@ -69,19 +69,6 @@
             "fileBlob": "4ea78894f161afb9365dc1b3c0aae0f2f0a2ce64",
             "type": "generic_text"
         },
-        "d01ac58a-ec39-41a6-87e9-15452c4e814c": {
-            "symbol": "d01ac58a-ec39-41a6-87e9-15452c4e814c",
-            "path": "src/com/fieldexpert/fbapi4j/common/Assert.java",
-            "text": "package",
-            "lineNumber": 1,
-            "lineData": "package com.fieldexpert.fbapi4j.commonly;",
-            "wordIndex": {
-                "start": 0,
-                "end": 0
-            },
-            "fileBlob": "03bbb8b78bdb13be443ba3397547a0330f1fddca",
-            "type": "generic_text"
-        },
         "a5a057e2-11ef-4a3f-b0dd-c2d629c0c94e": {
             "type": "path",
             "text": "src/com/fieldexpert/fbapi4j/Area.java",
@@ -92,7 +79,7 @@
     "meta": {
         "app_version": "0.5.0-0",
         "file_blobs": {
-            "src/com/fieldexpert/fbapi4j/common/Assert.java": "03bbb8b78bdb13be443ba3397547a0330f1fddca",
+            "src/com/fieldexpert/fbapi4j/common/Assert.java": "ec5b898f3eefe276324f57ac17b7c07ae33318c2",
             "src/com/fieldexpert/fbapi4j/Project.java": "4ea78894f161afb9365dc1b3c0aae0f2f0a2ce64"
         }
     }
