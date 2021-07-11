@@ -46,24 +46,6 @@
             ]
         },
         {
-            "type": "snippet",
-            "lines": [
-                " \t\t}",
-                " \t}",
-                " ",
-                "*\tpublic static void notNull(Object object) {",
-                "*\t\tnotNull(object, \"[Assertion failed] - this argument is required; it must not be null\");",
-                "*\t}",
-                "*}",
-                "*"
-            ],
-            "firstLineNumber": 8,
-            "path": "src/com/fieldexpert/fbapi4j/common/Assert.java",
-            "comments": [
-                "morew commentds"
-            ]
-        },
-        {
             "type": "text",
             "text": "ghjkghjkg ghjkghjkg ghjkghjk"
         }
