@@ -1,0 +1,76 @@
+{
+    "id": "kNjY9GiShuId6dgaZp8L",
+    "name": "This is doc§",
+    "content": [
+        {
+            "type": "text",
+            "text": "Hello I'm doc"
+        },
+        {
+            "type": "snippet",
+            "lines": [
+                "*package com.fieldexpert.fbapi4j.common;",
+                "*",
+                " public class Assert {",
+                " ",
+                " \tpublic static void notNull(Object object, String message) {"
+            ],
+            "firstLineNumber": 1,
+            "path": "src/com/fieldexpert/fbapi4j/common/Assert.java",
+            "comments": [
+                "THis is comment"
+            ]
+        },
+        {
+            "type": "snippet",
+            "lines": [
+                " \t\tsetName(name);",
+                " \t}",
+                " ",
+                "*\tProject(Integer id, String name) {",
+                "*\t\tsetId(id);",
+                "*\t\tsetName(name);",
+                "*\t}",
+                " ",
+                " \tpublic Integer getId() {",
+                " \t\treturn (Integer) fields.get(Fbapi4j.IX_PROJECT);"
+            ],
+            "firstLineNumber": 10,
+            "path": "src/com/fieldexpert/fbapi4j/Project.java",
+            "comments": [
+                "Haaaaaaa!\n\ncvfevfedv\n\nvfdevfeds"
+            ]
+        },
+        {
+            "type": "text",
+            "text": "ghjkghjkg ghjkghjkg ghjkghjk"
+        },
+        {
+            "type": "snippet",
+            "lines": [
+                " \t\t}",
+                " \t}",
+                " ",
+                "*\tpublic static void notNull(Object object) {",
+                "*\t\tnotNull(object, \"[Assertion failed] - this argument is required; it must not be null\");",
+                "*\t}",
+                "*}",
+                "*"
+            ],
+            "firstLineNumber": 8,
+            "path": "src/com/fieldexpert/fbapi4j/common/Assert.java",
+            "comments": [
+                "morew commentds"
+            ]
+        }
+    ],
+    "symbols": {},
+    "file_version": "2.0.2",
+    "meta": {
+        "app_version": "0.5.0-0",
+        "file_blobs": {
+            "src/com/fieldexpert/fbapi4j/common/Assert.java": "d094db61330b99fe9f84ab11768a97c09582a6f8",
+            "src/com/fieldexpert/fbapi4j/Project.java": "4ea78894f161afb9365dc1b3c0aae0f2f0a2ce64"
+        }
+    }
+}
