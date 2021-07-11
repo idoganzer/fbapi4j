@@ -1,4 +1,4 @@
-package com.fieldexpert.fbapi4j.common;
+package com.fieldexpert.fbapi4j.commonly;
 
 public class Assert {
 
